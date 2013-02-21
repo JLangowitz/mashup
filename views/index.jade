@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	div(class="container")
+		div(class="navbar navbar-fixed-top navbar-inverse")
+			div(class='navbar-inner')
+				div(class='container')
+					a(class="brand", href="") DropTube
+					ul(class='nav')
+						li(class='divider-vertical')
+						li
+							a(href='/') Recent Uploads
+						li(class='divider-vertical')
+						li
+							a(href='/home') My Page
+						li(class='divider-vertical')
+						li(class='pull-right')
+							p(class='navbar-text', id='user') #{user.name}
+		div
+			include _vids
+block js

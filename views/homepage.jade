@@ -1,0 +1,41 @@
+extends layout
+
+block content
+	div(class="container")
+		div(class="navbar navbar-fixed-top navbar-inverse")
+			div(class='navbar-inner')
+				div(class='container')
+					a(class="brand", href="") DropTube
+					ul(class='nav')
+						li(class='divider-vertical')
+						li
+							a(href='/') Recent Uploads
+						li(class='divider-vertical')
+						li
+							a(href='/home') My Page
+						li(class='divider-vertical')
+						li(class='pull-right')
+							p(class='navbar-text', id='user') #{user.name}
+		div
+			form(class='form-horizontal', id='upload')
+					legend Share a New Video!
+					div(class="control-group")
+						label(class="control-label") Enter a Valid URL for Your Video!
+						div(class="controls")
+							input(type="text", id="URL", placeholder="URL")
+								span(class='help-inline')Make sure this is a valid URL link to your video
+					div(class="control-group")
+						label(class="control-label") Enter a Description for Your Video!
+						div(class="controls")
+							input(type="textarea", id="description", placeholder="Awesome Video")
+					div(class="control-group")
+						div(class="controls")
+							input(type="submit", name="submit", class = "btn btn-primary", value='Share Link')
+		div(class='row-fluid')
+			div(class='span4 offset5')
+				form(action='/logout', method='post')
+						div(class="control-group")
+							div(class="controls")
+								input(type="submit", name="submit", class = "btn btn-primary", value='Logout')
+block js
+	script(src='/javascripts/main.js')
