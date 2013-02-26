@@ -57,7 +57,7 @@ vid.save (function (err) {
 
 That unused success data is the data that will be passed to the `$.post` success callback, and if there's an error, you handle it on the server side.  To be really useful, instead of just `return console.log (err);`, you would probably `res.render ("error");` and have your server render and error page saying that there was an issue with POSTing the data.  Does this all make sense?  It's a bit more involved than your used to, but it's worth learning, so if you're confused you should talk to a member of the teaching team.
 
-Also your `main.js` file is riddled with `console.log`s, which you don't want because the users will be able to see them in their browser consoles.  Also, what's the `setInterval` doing in [Line 23](https://github.com/JLangowitz/mashup/blob/master/public/javascripts/main.js#L23)?
+Also your `main.js` file is riddled with `console.log`s, which you don't want because the users will be able to see them in their browser consoles.  Also, what's the `setInterval` doing in [Line 23](https://github.com/JLangowitz/mashup/blob/master/public/javascripts/main.js#L23)?  Maybe the function `vidFeed` should be in there?
 
 ## `views/`
 
